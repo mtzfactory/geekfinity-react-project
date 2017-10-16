@@ -3,7 +3,7 @@
 ![html-5](https://mtzfactory.github.io/logos/png/html-5.png)
 ![css-3](https://mtzfactory.github.io/logos/png/css-3.png)
 
-### GeekInfinity ~ tomate un momento de descanso geek.
+### Geekfinity ~ tomate un momento de descanso geek.
 
 Para instalar este ejemplo:
 
@@ -14,22 +14,29 @@ $ npm install
 $ npm start
 ```
 
-### PROYECTO
+### PROYECTO ~ modulos.
 
-1.- WEATHER ~ A través de las coordenadas o ciudad que devuelve una api de [localización][freegeoip] recuperar la previsión del tiempo, tres posibbles fuentes: [1][darksky] [2][wunderground] [3][openweathermap]
+1.- WEATHER ~ A través de las coordenadas o ciudad que devuelve una api de [localización][freegeoip] recuperar la previsión del tiempo, tres posibles fuentes: [1][darksky] [2][wunderground] [3][openweathermap]
 
-2.- BAKGROUNDS ~ 
+2.- BAKGROUNDS ~ fondos de pantalla con estilo geek.
 
-3.- GEEKFACTS ~ 
+3.- GEEKFACTS ~ random de frases a partir de varias APIs.
 
-4.- TODO ~ 
+4.- ** TODO ~ tipico to-do... pero con nuestro toque geek.
 
+5.- ** LOCALSTORAGE ~ guardar configuración del usuario en el localStorage del navegador.
+
+6.- ** PERFIL GITHUB ~ muestra info de nuestro perfil de GitHub.
+
+_** === opcional_
 
 ### TODO
 
 + buscar mejor nombre, si es necesario.
 + encontrar fuente de imagenes geek para fotos de fondo.
 + encontrar fuente de frases geeks.
++ plantear primer formato de landing page.
+
 
 #### SkylabCoders Academy - Full Stack Web Development Bootcamp
 
