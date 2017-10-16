@@ -3,7 +3,7 @@
 ![html-5](https://mtzfactory.github.io/logos/png/html-5.png)
 ![css-3](https://mtzfactory.github.io/logos/png/css-3.png)
 
-### Geekfinity ~ tomate un momento de descanso geek.
+### Geekfinity ~ tómate un momento de descanso geek.
 
 Para instalar este ejemplo:
 
