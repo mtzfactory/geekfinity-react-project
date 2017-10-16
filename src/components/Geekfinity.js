@@ -10,7 +10,7 @@ class Geekfinity extends Component {
     constructor() {
         super()
 
-        this.state({
+        this.state ={
             location: {
                 ip: '',
                 country_code: '',
@@ -22,12 +22,13 @@ class Geekfinity extends Component {
                 latitude: 0,
                 longitude: 0
             },
-        })
+        }
     }
 
     componentWillMount() {
         locationService.getLocation()
-            .then((location) => {
+            .then(location => {
+                console.log(location)
                 this.setState(location)
             })
             .catch(function(error) {
