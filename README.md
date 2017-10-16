@@ -20,7 +20,7 @@ $ npm start
 
 2.- BAKGROUNDS ~ fondos de pantalla con estilo geek.
 
-3.- GEEKFACTS ~ random de frases a partir de varias APIs.
+3.- GEEKQUOTES ~ random de frases a partir de varias APIs.
 
 4.- ** TODO ~ tipico to-do... pero con nuestro toque geek.
 
