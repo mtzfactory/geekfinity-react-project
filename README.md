@@ -16,7 +16,7 @@ $ npm start
 
 ### PROYECTO ~ modulos.
 
-1.- WEATHER ~ A través de las coordenadas o ciudad que devuelve una api de [localización][freegeoip] recuperar la previsión del tiempo, tres posibles fuentes: [1][darksky] [2][wunderground] [3][openweathermap]
+1.- WEATHER ~ A través de las coordenadas o ciudad que devuelve una api de [localización][freegeoip] recuperar la previsión del tiempo, tres posibles fuentes: [[1][darksky]] [[2][wunderground]] [[3][openweathermap]]
 
 2.- BAKGROUNDS ~ fondos de pantalla con estilo geek.
 
