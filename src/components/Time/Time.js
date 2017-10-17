@@ -7,22 +7,31 @@ class Time extends Component {
         super()
 
         this.state ={
-            time: '',
+            time: ''
         }
     }
 
     componentDidMount() {
+        // console.log(
+        //         ("0" + myTime.getHours()).slice(-2)   + " " + 
+        //         ("0" + myTime.getMinutes()).slice(-2))
         setInterval( () => {
-            this.setState({
-            time : new Date().toLocaleString()
-            })
+            const myTime = new Date()
+            const hours = ("0" + myTime.getHours()).slice(-2)
+            const minutes = ("0" + myTime.getMinutes()).slice(-2)
+            const seconds = myTime.getSeconds()
+            //console.log(seconds)
+            const time = hours + (seconds%2 ? ':' : ' ') + minutes
+
+            this.setState({time})
         },1000)
      } 
 
     render() {
         return (
-            <section style={{ color: this.props.foreColor, backGround: this.props.backColor }}>
+            <section className="time" style={{ color: this.props.foreColor, backGround: this.props.backColor }}>
                 <p>{this.state.time}</p>
+                <p className="welcome">May the Force be with you, Ricardo. </p>
             </section>
         )
     }

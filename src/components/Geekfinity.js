@@ -12,8 +12,8 @@ class Geekfinity extends Component {
             <main>
                 <h1>Geekfinity</h1>
                 <Forecast foreColor='black'/>
-                <Quotes foreColor='black'/>
                 <Time />
+                <Quotes foreColor='black'/>
             </main>
         )
     }
