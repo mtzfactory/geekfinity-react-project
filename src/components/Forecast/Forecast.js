@@ -51,7 +51,6 @@ class Forecast extends Component {
             <section className="forecast">
             {
                 Object.keys(forecast).length &&
-                <div>
                 <div className="wrapper">
                     <ForecastIcon icon={ forecast.icon }/>
                     <div className="wrapper move-right">
@@ -59,16 +58,6 @@ class Forecast extends Component {
                         <p className="temp" style={{ color: this.props.foreColor }}>{ forecast.feelslike_c }C</p>
                     </div>
                 </div>
-                
-                <div className="wrapper">
-                    <ForecastIcon icon="sleet"/>
-                    <div className="wrapper move-right">
-                        <p className="weather" style={{ color: this.props.foreColor }}>{ forecast.weather }</p>
-                        <p className="temp" style={{ color: this.props.foreColor }}>{ forecast.feelslike_c }C</p>
-                    </div>
-                </div>
-                </div>
-
             }
             </section>
         )

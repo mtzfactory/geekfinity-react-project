@@ -1,6 +1,5 @@
 section.forecast {
-  display: inline-block;
-  background-color: palegreen; }
+  display: inline-block; }
   section.forecast .wrapper {
     display: inline-block; }
   section.forecast .temp {

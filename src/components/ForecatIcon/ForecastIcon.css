@@ -3,10 +3,9 @@ div.forecast-icon {
   display: inline-block;
   _padding-bottom: 2em;
   width: 6em;
-  height: 6em;
-  background-color: palegoldenrod; }
+  height: 6em; }
   div.forecast-icon ul {
-    font-size: 14px;
+    _font-size: 14px;
     margin: 0;
     _margin: 7px 0;
     padding-left: 0;
