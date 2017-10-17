@@ -1,15 +1,17 @@
 import React, { Component } from 'react';
 
 import Quotes from './Quotes/Quotes'
+import Forecast from './Forecast/Forecast'
 
 class Geekfinity extends Component {
 
     render() {
         return (
-            <div>
-            <h1>Geekfinity</h1>
-            <Quotes foreColor='black'/>
-            </div>
+            <main>
+                <h1>Geekfinity</h1>
+                <Forecast foreColor='black'/>
+                <Quotes foreColor='black'/>
+            </main>
         )
     }
 }

@@ -1,0 +1,36 @@
+section.forecast {
+    display: inline-block;
+    
+    // & * {
+    //     box-shadow: inset 0 0 1px #ccc;
+    // }
+    
+    & .wrapper {
+        display: inline-block;
+    }
+
+    & .temp {
+        font-family: 'Nova Mono', monospace;
+        font-size: 24px;
+        margin: 6px 0 0 0;
+        text-align: center;
+    }
+
+    & .weather {
+        font-family: 'Quicksand', sans-serif;  
+        text-align: center; 
+        margin: 20px 0 0 0;     
+    }
+
+    & .move-left {
+        float: left;
+    }
+
+    & .move-right {
+        float: right;
+    }
+
+    & .move-right:last-of-type {
+        clear: both;
+    }
+}
