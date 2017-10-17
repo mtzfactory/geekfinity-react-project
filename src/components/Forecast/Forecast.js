@@ -4,6 +4,8 @@ import './Forecast.css'
 import locationService from '../../services/LocationService'
 import forecastService from '../../services/ForecastService'
 
+import ForecastIcon from '../ForecatIcon/ForecastIcon'
+
 class Forecast extends Component {
 
     constructor() {
@@ -47,13 +49,26 @@ class Forecast extends Component {
 
         return (
             <section className="forecast">
-            {    
-                Object.keys(forecast).length && 
+            {
+                Object.keys(forecast).length &&
                 <div>
-                    <p>{ forecast.display_location.full }</p>
-                    <p>{ forecast.feelslike_c }</p>   
+                <div className="wrapper">
+                    <ForecastIcon icon={ forecast.icon }/>
+                    <div className="wrapper move-right">
+                        <p className="weather" style={{ color: this.props.foreColor }}>{ forecast.weather }</p>
+                        <p className="temp" style={{ color: this.props.foreColor }}>{ forecast.feelslike_c }C</p>
+                    </div>
                 </div>
                 
+                <div className="wrapper">
+                    <ForecastIcon icon="sleet"/>
+                    <div className="wrapper move-right">
+                        <p className="weather" style={{ color: this.props.foreColor }}>{ forecast.weather }</p>
+                        <p className="temp" style={{ color: this.props.foreColor }}>{ forecast.feelslike_c }C</p>
+                    </div>
+                </div>
+                </div>
+
             }
             </section>
         )

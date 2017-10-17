@@ -1,3 +1,22 @@
-
+section.forecast {
+  display: inline-block;
+  background-color: palegreen; }
+  section.forecast .wrapper {
+    display: inline-block; }
+  section.forecast .temp {
+    font-family: 'Nova Mono', monospace;
+    font-size: 24px;
+    margin: 6px 0 0 0;
+    text-align: center; }
+  section.forecast .weather {
+    font-family: 'Quicksand', sans-serif;
+    text-align: center;
+    margin: 20px 0 0 0; }
+  section.forecast .move-left {
+    float: left; }
+  section.forecast .move-right {
+    float: right; }
+  section.forecast .move-right:last-of-type {
+    clear: both; }
 
 /*# sourceMappingURL=Forecast.css.map */

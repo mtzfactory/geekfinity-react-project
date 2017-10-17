@@ -1,5 +1,5 @@
 import ApiService from './ApiService'
-import * as constants from '../constants/Constants';
+import * as constants from '../constants/ForecastConstants';
 
 class ForecastService extends ApiService{
     // esto es un ejemplo de uso
