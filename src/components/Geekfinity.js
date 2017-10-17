@@ -10,7 +10,6 @@ class Geekfinity extends Component {
     render() {
         return (
             <main>
-                <h1>Geekfinity</h1>
                 <Forecast foreColor='black'/>
                 <Time />
                 <Quotes foreColor='black'/>
