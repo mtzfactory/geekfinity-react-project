@@ -27,9 +27,9 @@ class Quotes extends Component {
 
     render() {
         return (
-            <div className="foot-quote" style={{color: this.props.foreColor, backGround: this.props.backColor}}>
+            <section className="quote" style={{ color: this.props.foreColor, backGround: this.props.backColor }}>
                 <p>{this.state.quote}</p>
-            </div>
+            </section>
         )
     }
 }
