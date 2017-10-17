@@ -4,6 +4,8 @@ import './Geekfinity.css'
 import Quotes from './Quotes/Quotes'
 import Forecast from './Forecast/Forecast'
 import Search from './Search/Search'
+import Time from './Time/Time'
+
 
 class Geekfinity extends Component {
 
@@ -13,6 +15,7 @@ class Geekfinity extends Component {
                 <h1>Geekfinity</h1>
                 <Search foreColor='black'/>
                 <Forecast foreColor='black'/>
+                <Time />
                 <Quotes foreColor='black'/>
             </main>
         )
