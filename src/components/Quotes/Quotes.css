@@ -1,0 +1,9 @@
+.foot-quote {
+	text-align: center;
+	font-size: 15px; 
+	color: black;
+	font-family: 'Quicksand', sans-serif;
+	_border: 1px solid red;
+	margin: 0 25%;
+	padding: 1%;
+}
