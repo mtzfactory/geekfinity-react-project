@@ -18,6 +18,7 @@ class Search extends Component {
 
     handleOnKeyPress = (event) =>  {
         if (event.key.toLowerCase() === 'enter' && event.target.value) {
+            event.target.blur()
             this.props.history.push('/search/' + encodeURI(event.target.value))
         }
     }
@@ -25,12 +26,13 @@ class Search extends Component {
     handleOnFocus = (event) => {
         if (event.type === 'focus') event.target.select()
         this.refs.underline.classList.toggle('active')
+        //ReactDOM.findDOMNode(this.refs.underline).classList.toggle('active')
     }
 
     // componentDidMount() {
     //     const input = ReactDOM.findDOMNode(this.refs.query);
-    //     ReactDOM.findDOMNode(this.refs.query).addEventListener('nv-focus', this.handleNVFocus);   
     //     input.value = ''
+    //     ReactDOM.findDOMNode(this.refs.query).addEventListener('focus', this.handleOnFocus);   
     // }
 
     // componentWillUnmount() {
@@ -42,7 +44,6 @@ class Search extends Component {
         return (
             <section className="search">
                 <span ref="underline" className="search-underline"></span>
-                {/* <i className="icon-search"></i> */}
                 <i className="search-icon fa fa-search" aria-hidden="true"></i>
                 <input
                     onKeyPress = { this.handleOnKeyPress }
