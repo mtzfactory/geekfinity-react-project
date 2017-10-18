@@ -8,7 +8,7 @@ class Wellcome extends Component {
 
         this.state = {
             name: '',
-            gitUser: ''
+            username: ''
         }
     }
 
@@ -18,22 +18,24 @@ class Wellcome extends Component {
         }
     }
 
-    handleOnKeyPress = (event) =>  {
+    handleOnKeyPressName = (event) =>  {
         if (event.key.toLowerCase() === 'enter' && event.target.value) {
-            if (this.state.name === '') {
-                this.setState({name: event.target.value})
-            }
-            else if (this.state.gitUser === '') {
-                this.setState({gitUser: event.target.value})
-            }
+            this.setState({ name: event.target.value })
         }
     }
 
-
+    handleOnKeyPressUsername = (event) =>  {
+        if (event.key.toLowerCase() === 'enter' && event.target.value) {
+            this.setState({ username: event.target.value })
+        }
+    }
 
     render() {
         return (
-            
+            <section className="wellcome">
+                <input onKeyPress={ this.handleOnKeyPressName } placeholder="what's your name?" type="text"/>
+                <input onKeyPress={ this.handleOnKeyPressUsername } placeholder="what's your github's user?" type="text"/>
+            </section>
         )
     }
 }

@@ -6,6 +6,8 @@ import Quotes from './Quotes/Quotes'
 import Forecast from './Forecast/Forecast'
 import Search from './Search/Search'
 import Time from './Time/Time'
+import Github from './Github/Github'
+
 
 class Geekfinity extends Component {
     constructor() {
@@ -13,7 +15,7 @@ class Geekfinity extends Component {
 
         this.state = {
             name: '',
-            gitname: ''
+            username: ''
         }
     }
 
@@ -35,6 +37,7 @@ class Geekfinity extends Component {
             <main className="geekfinity">
                 <h1>Geekfinity</h1>
                 { this.state.name ==='' && <Wellcome onUpdate={ this.handleUpdateState}/> }
+                <Github />
                 <Search foreColor='black'/>
                 <Forecast foreColor='black'/>
                 <Time />
