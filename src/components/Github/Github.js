@@ -31,7 +31,7 @@ class Github extends Component {
 
     componentWillMount() {
 
-        GithubService.getProfile()
+        GithubService.getProfile(this.props.user)
             .then(({name, public_repos, following, followers, avatar_url, html_url, followers_url, following_url, repos_url}) => {
                 //console.log(profile)
                 this.setState({name, public_repos, following, followers, avatar_url, html_url, followers_url, following_url, repos_url})
