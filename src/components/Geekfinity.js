@@ -57,7 +57,8 @@ class Geekfinity extends Component {
                     <Wellcome onUpdate={ this.handleUpdateState } foreColor="white"/>
                 }
                 { this.state.username !== '' &&
-                    <Github user={ this.state.username }/> }
+                    <Github user={ this.state.username }/>
+                }
                 <Search foreColor='white'/>
                 <Forecast foreColor='white'/>
                 <Time foreColor='white'/>
