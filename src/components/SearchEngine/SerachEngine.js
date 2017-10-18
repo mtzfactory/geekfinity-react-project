@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom'
 import './SearchEngine.css'
 
 import searchService from '../../services/SearchService'
@@ -20,6 +21,7 @@ class SearchEngine extends Component {
             case 'b': searchService.searchBing(q[1].trim()); break;
             default: searchService.search(query)
         }
+        this.props.history.push('/')
     }
 
     componentDidMount() {
@@ -50,4 +52,4 @@ class SearchEngine extends Component {
 
 }
 
-export default SearchEngine
+export default withRouter(SearchEngine)
