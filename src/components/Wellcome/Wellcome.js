@@ -42,6 +42,8 @@ class Wellcome extends Component {
 
     handleOnKeyPress = (event) => {
         if (event.key.toLowerCase() === 'enter' && event.target.value) {
+            const what = event.target.value
+
             if (this.state.name === '') {
                 this.setState({ name: event.target.value }, () => {
                     console.log('1-name: ' + this.state.name, '1-username: ' + this.state.username, ' -> setState (name)')
@@ -53,15 +55,21 @@ class Wellcome extends Component {
             }
             else if (this.state.username === '') {
 
-                this.setState({ username: event.target.value }, () => {
+                console.log('hey')
+
+                //this.setState(preState => console.log('hi'))
+
+                this.setState({ username: what }, () => {
                     console.log('2-name: ' + this.state.name, '2-username: ' + this.state.username, ' -> setState (username)')
+
+                    this.props.onUpdate(this.state)
                 })
 
                 // this.setState({
                 //     username: event.target.value
                 // })
 
-                this.props.onUpdate(this.state)
+
 
                 event.target.placeholder = 'updating...'
                 event.target.value = ''

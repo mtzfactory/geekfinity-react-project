@@ -29,7 +29,10 @@ class Geekfinity extends Component {
     }
 
     handleUpdateState = (newState) => {
-        this.setState(newState)
+        this.setState({
+            name: newState.name,
+            username: newState.username
+        })
 
         if (typeof(Storage) !== "undefined") {
             localStorage['geekfinity.config'] = JSON.stringify(this.state)
