@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
 import './Geekfinity.css'
 
-import Wellcome from './Wellcome/Wellcome'
 import backgroundService from '../services/BackgroundService'
 
+import Wellcome from './Wellcome/Wellcome'
 import Quotes from './Quotes/Quotes'
 import Forecast from './Forecast/Forecast'
 import Search from './Search/Search'
