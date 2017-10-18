@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import './Search.css'
 
 import { Switch, Route, withRouter } from 'react-router-dom'
@@ -25,6 +25,7 @@ class Search extends Component {
 
     handleOnFocus = (event) => {
         if (event.type === 'focus') event.target.select()
+        
         this.refs.underline.classList.toggle('active')
         //ReactDOM.findDOMNode(this.refs.underline).classList.toggle('active')
     }
@@ -51,6 +52,7 @@ class Search extends Component {
                     onBlur = { this.handleOnFocus }
                     ref="query"
                     className="search-input"
+                    placeholder="search"
                     type="text" autoComplete="off"/>                
                 <Switch>
                     <Route exact path="/search/:query" component = { SearchEngine }/>

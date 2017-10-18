@@ -1,7 +1,7 @@
 section.search {
   display: inline-block;
-  width: 205px;
   position: relative;
+  width: 205px;
   text-align: center; }
   section.search span.search-underline {
     position: absolute;
@@ -19,8 +19,6 @@ section.search {
     z-index: 2;
     background: 0 0;
     border: none;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
     color: #fff;
     line-height: 20px;
     outline: 0; }

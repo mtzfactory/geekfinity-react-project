@@ -28,15 +28,19 @@ class Geekfinity extends Component {
         }
     }
 
-    handleUpdateState(newState) {
+    handleUpdateState = (newState) => {
         this.setState(newState)
+
+        if (typeof(Storage) !== "undefined") {
+            localStorage['geekfinity.config'] = JSON.stringify(this.state)
+        }
     }
 
     render() {
         return (
             <main className="geekfinity">
                 <h1>Geekfinity</h1>
-                { this.state.name ==='' && <Wellcome onUpdate={ this.handleUpdateState}/> }
+                { this.state.name === '' && <Wellcome onUpdate={ this.handleUpdateState } foreColor="white"/> }
                 <Github />
                 <Search foreColor='black'/>
                 <Forecast foreColor='black'/>

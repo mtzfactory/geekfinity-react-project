@@ -1,0 +1,43 @@
+section.wellcome {
+    display: inline-block;
+    position: relative;
+    width: 305px;
+    text-align: center;
+
+    & label, & input {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 22px;
+    }
+
+    & input {
+        height: 60px;
+        width: 230px;
+        padding: 20px 2px 20px 18px;
+        z-index: 2;
+        background: 0 0;
+        border: none;
+        line-height: 20px;
+        outline: 0;
+        text-align: center;
+    }
+
+    & input::-webkit-input-placeholder { font-size: 16px; }
+    & input::-moz-placeholder { font-size: 16px; } /* Firefox 19+ */
+    & input:-moz-placeholder { font-size: 16px; }  /* Firefox 18- */
+    & input:-ms-input-placeholder { font-size: 16px; } /* IE */
+
+    & span.input-underline {
+        position: absolute;
+        top: 48px;
+        left: 8px;
+        right: 0;
+        border-bottom: 2px solid #fff;
+        opacity: 0;
+        -webkit-transition: opacity .15s ease;
+    
+        &.active {
+            opacity: 1;
+        }
+    }
+
+}
