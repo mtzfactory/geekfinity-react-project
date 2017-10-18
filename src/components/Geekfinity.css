@@ -1,4 +1,21 @@
 main.geekfinity h1 {
   text-align: center; }
 
+  .appear-hide {
+	opacity: 0;
+}
+.bg-full {
+	background-size: cover;
+	background-position: 50%;
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	 -webkit-transition: opacity 6s ease-in-out;
+    -moz-transition: opacity 6s ease-in-out;
+    -ms-transition: opacity 6s ease-in-out;
+    -o-transition: opacity 6s ease-in-out;
+     opacity: 1;
+}
+
+
 /*# sourceMappingURL=Geekfinity.css.map */
