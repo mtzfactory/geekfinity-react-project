@@ -1,0 +1,36 @@
+.profile {
+	position: relative;
+	font-family: 'Quicksand', sans-serif;
+	_border: 1px solid red;
+	font-size: 16px;
+	display: inline-block;
+	padding: 7px 7px 3px 7px;
+	margin: 1%;
+	border-radius: 5px;
+	background-color: rgba(128, 128, 128, 0.5);
+}
+
+.profile p, a {
+	font-size: 16px;
+	text-decoration: none;
+	color: inherit;
+}
+
+img {
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	margin: 1%;
+}
+
+.photo {
+	display: inline;
+	float: left;
+}
+
+.profileInfo {
+	_border: 1px solid blue;
+	display: inline-block;
+	margin-left: 5px;
+}
+
