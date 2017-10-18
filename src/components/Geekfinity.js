@@ -23,17 +23,22 @@ class Geekfinity extends Component {
         if (typeof(Storage) !== "undefined") {
             if (localStorage['geekfinity.config']) {
                 const config = JSON.parse(localStorage['geekfinity.config']);
+
+                console.log('config', config)
+
                 this.setState(config)
             }
         }
     }
 
     handleUpdateState = (newState) => {
-        this.setState(newState)
 
-        if (typeof(Storage) !== "undefined") {
-            localStorage['geekfinity.config'] = JSON.stringify(this.state)
-        }
+        this.setState(newState, () => {
+            if (typeof(Storage) !== "undefined") {
+                console.log('store', this.state)
+                localStorage['geekfinity.config'] = JSON.stringify(this.state)
+            }
+        })
     }
 
     render() {
