@@ -12,56 +12,25 @@ class Wellcome extends Component {
         }
     }
 
-    // handleOnKeyPressName = (event) =>  {
-    //     if (event.key.toLowerCase() === 'enter' && event.target.value) {
-    //         this.setState({ name: event.target.value })
-    //     }
-    // }
-
-    // handleOnKeyPressUsername = (event) =>  {
-    //     if (event.key.toLowerCase() === 'enter' && event.target.value) {
-    //         this.setState({ username: event.target.value })
-    //         // this.props.onUpdate(this.state)
-    //     }
-    // }
-
-    // renderWellcome() {
-    //     if (this.state.name === '')
-    //         return <input onKeyPress={ this.handleOnKeyPressName } placeholder="what's your name?" type="text"/>
-    //     else if (this.state.username === '')
-    //         return <input onKeyPress={ this.handleOnKeyPressUsername } placeholder="what's your github's user?" type="text"/>
-    // }
-
-    componentWillUpdate(nextProps, nextState) {
-        console.log('4-name: ' + nextState.name, '4-username: ' + nextState.username, ' -> componentWillUpdate')
-    }
-
     handleOnFocus = (event) => {
         this.refs.underline.classList.toggle('active')
     }
 
     handleOnKeyPress = (event) => {
         if (event.key.toLowerCase() === 'enter' && event.target.value) {
+            const what = event.target.value
+
             if (this.state.name === '') {
-                this.setState({ name: event.target.value }, () => {
-                    console.log('1-name: ' + this.state.name, '1-username: ' + this.state.username, ' -> setState (name)')
-                })
+                this.setState({ name: what })
 
                 event.target.value = ''
-                this.refs.label.value = "username:"
+                this.refs.label.innerHTML = "user:"
                 event.target.placeholder = 'what\'s your github\'s user?'
             }
             else if (this.state.username === '') {
-
-                this.setState({ username: event.target.value }, () => {
-                    console.log('2-name: ' + this.state.name, '2-username: ' + this.state.username, ' -> setState (username)')
+                this.setState({ username: what }, () => {
+                    this.props.onUpdate(this.state)
                 })
-
-                // this.setState({
-                //     username: event.target.value
-                // })
-
-                this.props.onUpdate(this.state)
 
                 event.target.placeholder = 'updating...'
                 event.target.value = ''

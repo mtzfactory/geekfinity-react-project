@@ -45,7 +45,9 @@ class Geekfinity extends Component {
         return (
             <main className="geekfinity">
                 <h1>Geekfinity</h1>
-                { this.state.name === '' && <Wellcome onUpdate={ this.handleUpdateState } foreColor="white"/> }
+                { this.state.name === '' && 
+                    <Wellcome onUpdate={ this.handleUpdateState } foreColor="white"/>
+                }
                 <Github />
                 <Search foreColor='black'/>
                 <Forecast foreColor='black'/>
