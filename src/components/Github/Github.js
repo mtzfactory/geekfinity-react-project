@@ -9,6 +9,7 @@ class Github extends Component {
         super()
 
         this.state ={
+            isToggleOn: false,
             name: '',
             public_repos: 0,
             followers: 0,
@@ -19,7 +20,14 @@ class Github extends Component {
             following_url: '',
             repos_url: ''
         }
+        this.handleClick = this.handleClick.bind(this);
     }
+
+    handleClick() {
+        this.setState(prevState => ({
+            isToggleOn: !prevState.isToggleOn
+        }));
+     }
 
     componentWillMount() {
 
@@ -36,14 +44,19 @@ class Github extends Component {
     render() {
         return (
             <section className="profile" style={{ color: this.props.foreColor, backGround: this.props.backColor }}>
-                <span  class="photo">
-                    <a href={this.state.html_url}><img src={this.state.avatar_url} /></a>
+                <span  className="photo">
+                    <img src={this.state.avatar_url} onClick={this.handleClick} alt="Github profile"/>
                 </span>              
                 <div className="profileInfo">
-                    <p><a href={this.state.html_url}>Name: {this.state.name}</a></p>
-                    <p><a href={this.state.repos_url}>Public Repositories: {this.state.public_repos}</a></p>
-                    <p><a href={this.state.followers_url}>Followers: {this.state.followers}</a></p>
-                    <p><a href={this.state.following_url}>Following: {this.state.following}</a></p>
+                    {this.state.isToggleOn
+                        ? //console.log('on')
+                            <div>
+                                <p><a href={this.state.html_url}>Name: {this.state.name}</a></p>
+                                <p><a href={this.state.repos_url}>Public Repositories: {this.state.public_repos}</a></p>
+                                <p><a href={this.state.followers_url}>Followers: {this.state.followers}</a></p>
+                                <p><a href={this.state.following_url}>Following: {this.state.following}</a></p>
+                            </div>
+                        : null}
                 </div> 
             </section>
         )
