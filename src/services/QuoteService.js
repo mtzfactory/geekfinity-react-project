@@ -12,8 +12,8 @@ class QuoteService extends ApiService{
     	const index = Math.floor((Math.random() * 10))
     	//console.log(index)
     	let origin = 0
-    	if (index > 4 && index <= 6) { origin = 1 }
-    	if (index > 6) { origin = 2 }
+    	if (index > 4 && index <= 5) { origin = 1 }
+    	if (index > 5) { origin = 2 }
 
     	//console.log(origin)
     	//origin = 2
