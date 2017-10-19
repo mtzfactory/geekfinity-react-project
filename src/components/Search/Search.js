@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
+//import ReactDOM from 'react-dom';
 import './Search.css'
 
 import { Switch, Route, withRouter } from 'react-router-dom'
@@ -23,11 +23,12 @@ class Search extends Component {
         }
     }
 
-    handleOnFocus = (event) => {
-        if (event.type === 'focus') event.target.select()
-        this.refs.underline.classList.toggle('active')
-        //ReactDOM.findDOMNode(this.refs.underline).classList.toggle('active')
-    }
+    // handleOnFocus = (event) => {
+    //     if (event.type === 'focus') event.target.select()
+        
+    //     this.refs.underline.classList.toggle('active')
+    //     //ReactDOM.findDOMNode(this.refs.underline).classList.toggle('active')
+    // }
 
     // componentDidMount() {
     //     const input = ReactDOM.findDOMNode(this.refs.query);
@@ -43,14 +44,14 @@ class Search extends Component {
     render() {
         return (
             <section className="search">
-                <span ref="underline" className="search-underline"></span>
                 <i className="search-icon fa fa-search" aria-hidden="true"></i>
                 <input
                     onKeyPress = { this.handleOnKeyPress }
                     onFocus = { this.handleOnFocus }
                     onBlur = { this.handleOnFocus }
                     ref="query"
-                    className="search-input"
+                    className="search-input search-underline"
+                    placeholder="Search"
                     type="text" autoComplete="off"/>                
                 <Switch>
                     <Route exact path="/search/:query" component = { SearchEngine }/>

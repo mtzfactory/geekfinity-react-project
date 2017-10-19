@@ -1,42 +1,38 @@
 section.search {
-    display: inline-block;
-    width: 205px;
+    display: block;
     position: relative;
+    width: 205px;
     text-align: center;
+    z-index: 1;
+    top: 55%;
+    margin: 0 auto;
 
-    & span.search-underline {
+    & .search-underline {
         position: absolute;
-        top: 48px;
         left: 8px;
         right: 0;
-        border-bottom: 2px solid #fff;
-        opacity: 0;
+        border-bottom: 2px solid #ffffff;
+        opacity: 1;
         -webkit-transition: opacity .15s ease;
-    
-        &.active {
-            opacity: 1;
-        }
     }
 
     & input.search-input {
         height: 60px;
-        padding: 20px 2px 20px 38px;
+        padding: 20px 2px 0px 38px;
         z-index: 2;
         background: 0 0;
-        border: none;
-        -moz-box-sizing: border-box;
-        box-sizing: border-box;
-        color: #fff;
+        color: #ffffff;
         line-height: 20px;
         outline: 0;
     }
+    & input::-webkit-input-placeholder {color: white; opacity: 0.5;}
 
     & i.search-icon {
         position: absolute;
         left: 15px;
         top: 0;
         z-index: 1;
-        line-height: 57px;
+        line-height: 76px;
         opacity: .8;
         color: white;
     }

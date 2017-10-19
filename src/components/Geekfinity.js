@@ -3,6 +3,7 @@ import './Geekfinity.css'
 
 import backgroundService from '../services/BackgroundService'
 
+import Wellcome from './Wellcome/Wellcome'
 import Quotes from './Quotes/Quotes'
 import Forecast from './Forecast/Forecast'
 import Search from './Search/Search'
@@ -15,9 +16,11 @@ class Geekfinity extends Component {
         super()
 
         this.state = {
+            name: '',
+            username: '',
             image: ''
         }
-    } 
+    }
 
     componentDidMount() {
        
@@ -28,15 +31,31 @@ class Geekfinity extends Component {
             .catch(function(error) {
                 console.error(error)
             })
-            
+        
+        if (typeof(Storage) !== "undefined") {
+            if (localStorage['geekfinity.config']) {
+                const config = JSON.parse(localStorage['geekfinity.config']);
+                this.setState(config)
+            }
+        }
     }
 
+    handleUpdateState = (newState) => {
+        
+        this.setState(newState, () => {
+            if (typeof(Storage) !== "undefined") {
+                localStorage['geekfinity.config'] = JSON.stringify({ name: this.state.name, username: this.state.username })
+            }
+        })
+    }
 
     render() {
         return (
-            <main className="geekfinity bg-full appear-hide" style = {{backgroundImage: "url(" + this.state.image + ")"}}>
-                <h1>Geekfinity</h1>
-                <Github />
+            <main className="geekfinity bg-full appear-hide" style = {{ backgroundImage: "url(" + this.state.image + ")" }}>
+                <Wellcome onUpdate={ this.handleUpdateState } name={this.state.name} username={this.state.username}  foreColor="white"/>
+                { this.state.username !== '' &&
+                    <Github user={ this.state.username }/>
+                }
                 <Search foreColor='white'/>
                 <Forecast foreColor='white'/>
                 <Time foreColor='white'/>

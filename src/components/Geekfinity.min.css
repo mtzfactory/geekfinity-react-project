@@ -1,1 +1,1 @@
-main.geekfinity h1{text-align:center}
+main.geekfinity{background-size:cover;height:100vh;width:100vw;background-repeat:no-repeat}main.geekfinity h1{text-align:center}main.geekfinity:before{background:linear-gradient(360deg,rgba(0,0,0,.4) 1,rgba(0,0,0,.4));content:'';display:block;height:100%;position:absolute;top:0;width:100%;z-index:1}

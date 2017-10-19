@@ -1,0 +1,43 @@
+section.wellcome {
+    display: block;
+    position: relative;
+    width: 600px;
+    text-align: center;
+    z-index: 1;
+    top: 52%;
+    margin: 0 auto;
+
+    & label, & input {
+        font-family: 'Quicksand', sans-serif;
+        font-size: 20px;
+    }
+
+    & input {
+        height: 40px;
+        width: 250px;
+        padding: 5px 5px 0px 6px;
+        z-index: 2;
+        background: 0 0;
+        border: none;
+        line-height: 20px;
+        outline: 0;
+        text-align: center;
+    }
+
+    & input::-webkit-input-placeholder { font-size: 16px; color: white; opacity: 0.5;}
+    & input::-moz-placeholder { font-size: 16px; color: white; opacity: 0.5;} /* Firefox 19+ */
+    & input:-moz-placeholder { font-size: 16px; color: white; opacity: 0.5;}  /* Firefox 18- */
+    & input:-ms-input-placeholder { font-size: 16px; color: white; opacity: 0.5;} /* IE */
+
+    & input.input-underline {
+        _position: absolute;
+        top: px;
+        _left: 300px;
+        width: 250px;
+        right: 0;
+        border-bottom: 2px solid #fff;
+        opacity: 1;
+        -webkit-transition: opacity .15s ease;
+    }
+
+}
