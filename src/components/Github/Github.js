@@ -26,11 +26,11 @@ class Github extends Component {
         }));
      }
 
-    componentWillMount() {
+    componentDidMount() {
 
         GithubService.getProfile(this.props.user)
             .then(({name, public_repos, following, followers, avatar_url, html_url}) => {
-                console.log(name, public_repos, following, followers, avatar_url, html_url)
+                //console.log(name, public_repos, following, followers, avatar_url, html_url)
                 this.setState({name, public_repos, following, followers, avatar_url, html_url})
             })
             .catch(function(error) {

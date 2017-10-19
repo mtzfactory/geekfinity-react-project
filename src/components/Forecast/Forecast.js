@@ -45,8 +45,8 @@ class Forecast extends Component {
             })
     }
 
-    componentWillMount() {
-        console.log('Forecast', 'componentWillMount')
+    componentDidMount() {
+        console.log('Forecast', 'componentDidMount')
         this.updateForecast()
     }
 

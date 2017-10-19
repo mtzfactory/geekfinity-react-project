@@ -24,8 +24,8 @@ class Quotes extends Component {
         })
     }
 
-    componentWillMount() {
-        console.log('Quotes', 'componentWillMount')
+    componentDidMount() {
+        console.log('Quotes', 'componentDidMount')
         this.updateQuote()
     }
 
