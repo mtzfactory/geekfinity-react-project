@@ -3,6 +3,9 @@ section.search {
     width: 205px;
     position: relative;
     text-align: center;
+    z-index: 1;
+    top: 50%;
+    margin: 0 auto;
 
     & span.search-underline {
         position: absolute;

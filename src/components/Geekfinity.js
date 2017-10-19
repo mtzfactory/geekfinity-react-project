@@ -35,7 +35,6 @@ class Geekfinity extends Component {
     render() {
         return (
             <main className="geekfinity bg-full appear-hide" style = {{backgroundImage: "url(" + this.state.image + ")"}}>
-                <h1>Geekfinity</h1>
                 <Github />
                 <Search foreColor='white'/>
                 <Forecast foreColor='white'/>

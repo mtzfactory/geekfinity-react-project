@@ -51,10 +51,10 @@ class Github extends Component {
                     {this.state.isToggleOn
                         ? //console.log('on')
                             <div>
-                                <p><a href={this.state.html_url}>Name: {this.state.name}</a></p>
-                                <p><a href={this.state.repos_url}>Public Repositories: {this.state.public_repos}</a></p>
-                                <p><a href={this.state.followers_url}>Followers: {this.state.followers}</a></p>
-                                <p><a href={this.state.following_url}>Following: {this.state.following}</a></p>
+                                <p><a href={this.state.html_url}><span>Name: </span>{this.state.name}</a></p>
+                                <p><a href={this.state.repos_url}><span>Public Repositories: </span>{this.state.public_repos}</a></p>
+                                <p><a href={this.state.followers_url}><span>Followers: </span>{this.state.followers}</a></p>
+                                <p><a href={this.state.following_url}><span>Following: </span>{this.state.following}</a></p>
                             </div>
                         : null}
                 </div> 

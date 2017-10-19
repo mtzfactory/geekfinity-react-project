@@ -1,21 +1,19 @@
-main.geekfinity h1 {
-  text-align: center; }
+main.geekfinity {
+  background-size: cover;
+  height: 100vh;
+  width: 100vw;
+  background-repeat: no-repeat; }
+  main.geekfinity h1 {
+    text-align: center; }
 
-  .appear-hide {
-	opacity: 0;
-}
-.bg-full {
-	background-size: cover;
-	background-position: 50%;
-	position: absolute;
-	height: 100%;
-	width: 100%;
-	 -webkit-transition: opacity 6s ease-in-out;
-    -moz-transition: opacity 6s ease-in-out;
-    -ms-transition: opacity 6s ease-in-out;
-    -o-transition: opacity 6s ease-in-out;
-     opacity: 1;
-}
-
+main.geekfinity:before {
+  background: linear-gradient(360deg, rgba(0, 0, 0, 0.4) 1, rgba(0, 0, 0, 0.4));
+  content: '';
+  display: block;
+  height: 100%;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 1; }
 
 /*# sourceMappingURL=Geekfinity.css.map */

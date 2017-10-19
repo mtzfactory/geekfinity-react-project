@@ -1,8 +1,11 @@
 section.search {
-  display: inline-block;
+  display: block;
   width: 205px;
   position: relative;
-  text-align: center; }
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+  margin: 0 auto; }
   section.search span.search-underline {
     position: absolute;
     top: 48px;
