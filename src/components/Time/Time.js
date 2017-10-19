@@ -31,7 +31,6 @@ class Time extends Component {
         return (
             <section className="time" style={{ color: this.props.foreColor, backGround: this.props.backColor }}>
                 <p>{this.state.time}</p>
-                <p className="welcome">May the Force be with you, Ricardo. </p>
             </section>
         )
     }

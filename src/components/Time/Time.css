@@ -1,12 +1,12 @@
 .time {
-	font-family: 'Inconsolata', monospace;
-	font-size: 100px;
-	text-align: center;
+    font-family: 'Inconsolata', monospace;
+    font-size: 120px;
+    text-align: center;
     max-width: 400px;
     margin: 0 auto;
     margin-bottom: 20px;
     padding: 0 20px 20px;
-    top: 20%;
+    top: 28%;
     position: relative;
     z-index: 1;
 }

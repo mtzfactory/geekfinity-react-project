@@ -1,14 +1,15 @@
 .profile {
-	position: relative;
-	font-family: 'Quicksand', sans-serif;
-	_border: 1px solid red;
-	font-size: 16px;
-	display: inline-block;
-	padding: 7px 7px 3px 7px;
-	margin: 1%;
-	border-radius: 50px;
-	background-color: rgba(255, 255, 255, 0.4);
-	z-index: 1;
+	position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    _border: 1px solid red;
+    font-size: 16px;
+    display: block;
+    padding: 7px 7px 3px 7px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+    top: 3%;
+    left: 1%;
 }
 
 .profile p, a {

@@ -52,10 +52,7 @@ class Geekfinity extends Component {
     render() {
         return (
             <main className="geekfinity bg-full appear-hide" style = {{ backgroundImage: "url(" + this.state.image + ")" }}>
-                <h1>Geekfinity</h1>
-                { this.state.name === '' && 
-                    <Wellcome onUpdate={ this.handleUpdateState } foreColor="white"/>
-                }
+                <Wellcome onUpdate={ this.handleUpdateState } name={this.state.name} username={this.state.username}  foreColor="white"/>
                 { this.state.username !== '' &&
                     <Github user={ this.state.username }/>
                 }
