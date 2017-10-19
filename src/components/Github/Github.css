@@ -1,13 +1,15 @@
 .profile {
-	position: relative;
-	font-family: 'Quicksand', sans-serif;
-	_border: 1px solid red;
-	font-size: 16px;
-	display: inline-block;
-	padding: 7px 7px 3px 7px;
-	margin: 1%;
-	border-radius: 5px;
-	background-color: rgba(128, 128, 128, 0.5);
+	position: absolute;
+    font-family: 'Quicksand', sans-serif;
+    _border: 1px solid red;
+    font-size: 16px;
+    display: block;
+    padding: 7px 7px 3px 7px;
+    border-radius: 50px;
+    background-color: rgba(255, 255, 255, 0.4);
+    z-index: 1;
+    top: 3%;
+    left: 1%;
 }
 
 .profile p, a {
@@ -19,8 +21,8 @@
 img {
 	width: 80px;
 	height: 80px;
-	border-radius: 50%;
-	margin: 1%;
+	border-radius: 50px;
+    
 }
 
 .photo {
@@ -31,6 +33,13 @@ img {
 .profileInfo {
 	_border: 1px solid blue;
 	display: inline-block;
-	margin-left: 5px;
+	
+}
+.profileInfo div {
+	margin-left: 8px;
+	padding-right: 5px;
+}
+.profileInfo p a span {
+	font-weight: bold;
 }
 

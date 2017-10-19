@@ -1,18 +1,21 @@
 section.wellcome {
-  display: inline-block;
+  display: block;
   position: relative;
-  width: 305px;
+  width: 600px;
   text-align: center;
+  z-index: 1;
+  top: 52%;
+  margin: 0 auto;
   /* Firefox 19+ */
   /* Firefox 18- */
   /* IE */ }
   section.wellcome label, section.wellcome input {
     font-family: 'Quicksand', sans-serif;
-    font-size: 22px; }
+    font-size: 20px; }
   section.wellcome input {
-    height: 60px;
-    width: 230px;
-    padding: 20px 2px 20px 18px;
+    height: 40px;
+    width: 250px;
+    padding: 5px 5px 0px 6px;
     z-index: 2;
     background: 0 0;
     border: none;
@@ -20,22 +23,29 @@ section.wellcome {
     outline: 0;
     text-align: center; }
   section.wellcome input::-webkit-input-placeholder {
-    font-size: 16px; }
+    font-size: 16px;
+    color: white;
+    opacity: 0.5; }
   section.wellcome input::-moz-placeholder {
-    font-size: 16px; }
+    font-size: 16px;
+    color: white;
+    opacity: 0.5; }
   section.wellcome input:-moz-placeholder {
-    font-size: 16px; }
+    font-size: 16px;
+    color: white;
+    opacity: 0.5; }
   section.wellcome input:-ms-input-placeholder {
-    font-size: 16px; }
-  section.wellcome span.input-underline {
-    position: absolute;
-    top: 48px;
-    left: 8px;
+    font-size: 16px;
+    color: white;
+    opacity: 0.5; }
+  section.wellcome input.input-underline {
+    _position: absolute;
+    top: px;
+    _left: 300px;
+    width: 250px;
     right: 0;
     border-bottom: 2px solid #fff;
-    opacity: 0;
+    opacity: 1;
     -webkit-transition: opacity .15s ease; }
-    section.wellcome span.input-underline.active {
-      opacity: 1; }
 
 /*# sourceMappingURL=Wellcome.css.map */
