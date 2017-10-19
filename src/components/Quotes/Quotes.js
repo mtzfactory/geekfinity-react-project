@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Quotes.css'
 
+import withInterval from '../../hoc/EnhancerHoc'
 import quoteService from '../../services/QuoteService'
 
 class Quotes extends Component {
@@ -13,16 +14,26 @@ class Quotes extends Component {
         }
     }
 
-    componentWillMount() {
-
+    updateQuote() {
         quoteService.getQuoteOfTheDay()
-            .then(quote => {
-                //console.log(quote)
-                this.setState({quote})
-            })
-            .catch(function(error) {
-                console.error(error)
-            })
+        .then(quote => {
+            this.setState({quote})
+        })
+        .catch(function(error) {
+            console.error(error)
+        })
+    }
+
+    componentWillMount() {
+        console.log('Quotes', 'componentWillMount')
+        this.updateQuote()
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.timestamp !== nextProps.timestamp) {
+            console.log('Quotes', 'componentWillReceiveProps')
+            this.updateQuote()
+        }
     }
 
     render() {
@@ -34,4 +45,4 @@ class Quotes extends Component {
     }
 }
 
-export default Quotes
+export default withInterval(Quotes)

@@ -15,6 +15,12 @@ class Geekfinity extends Component {
     constructor() {
         super()
 
+        this.timerId = 0
+
+        this.intervalBackground = 60
+        this.intervalForecast = 600
+        this.intervalQuote = 60
+
         this.state = {
             name: '',
             username: '',
@@ -22,15 +28,30 @@ class Geekfinity extends Component {
         }
     }
 
-    componentDidMount() {
-       
+    updateBackground() {
         backgroundService.getBackground()
-            .then(image => {
-                this.setState({ image })
-            })
-            .catch(function(error) {
-                console.error(error)
-            })
+        .then(image => {
+            this.setState({ image })
+        })
+        .catch(function(error) {
+            console.error(error)
+        })
+    }
+
+    handleSaveConfig = (newState) => {
+        this.setState(newState, () => {
+            if (typeof(Storage) !== "undefined") {
+                localStorage['geekfinity.config'] = JSON.stringify({ name: this.state.name, username: this.state.username })
+            }
+        })
+    }
+
+    componentDidMount() {
+        this.updateBackground()
+
+        this.timerId = setInterval(() => {
+            this.updateBackground()
+        }, this.intervalBackground * 1000)
         
         if (typeof(Storage) !== "undefined") {
             if (localStorage['geekfinity.config']) {
@@ -40,13 +61,8 @@ class Geekfinity extends Component {
         }
     }
 
-    handleUpdateState = (newState) => {
-        
-        this.setState(newState, () => {
-            if (typeof(Storage) !== "undefined") {
-                localStorage['geekfinity.config'] = JSON.stringify({ name: this.state.name, username: this.state.username })
-            }
-        })
+    componentWillUnmount() {
+        clearInterval(this.timerId);
     }
 
     render() {
@@ -54,15 +70,15 @@ class Geekfinity extends Component {
             <main className="geekfinity bg-full appear-hide" style = {{ backgroundImage: "url(" + this.state.image + ")" }}>
                 <h1>Geekfinity</h1>
                 { this.state.name === '' && 
-                    <Wellcome onUpdate={ this.handleUpdateState } foreColor="white"/>
+                    <Wellcome onSaveConfig={ this.handleSaveConfig } foreColor="white"/>
                 }
                 { this.state.username !== '' &&
                     <Github user={ this.state.username }/>
                 }
                 <Search foreColor='white'/>
-                <Forecast foreColor='white'/>
+                <Forecast foreColor='white' interval={ this.intervalForecast }/>
                 <Time foreColor='white'/>
-                <Quotes foreColor='white'/>
+                <Quotes foreColor='white' interval={ this.intervalQuote }/>
             </main>
         )
     }

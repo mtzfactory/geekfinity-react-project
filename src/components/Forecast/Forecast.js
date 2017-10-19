@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Forecast.css'
 
+import withInterval from '../../hoc/EnhancerHoc'
 import locationService from '../../services/LocationService'
 import forecastService from '../../services/ForecastService'
 
@@ -27,9 +28,9 @@ class Forecast extends Component {
         }
     }
 
-    componentWillMount() {
+    updateForecast() {
         const localState = {}
-
+        
         locationService.getLocation()
             .then(location => {
                 localState.location = location
@@ -42,6 +43,18 @@ class Forecast extends Component {
             .catch(function(error) {
                 console.error(error)
             })
+    }
+
+    componentWillMount() {
+        console.log('Forecast', 'componentWillMount')
+        this.updateForecast()
+    }
+
+    componentWillReceiveProps(nextProps) {
+        if (this.props.timestamp !== nextProps.timestamp) {
+            console.log('Forecast', 'componentWillReceiveProps')
+            this.updateForecast()
+        }
     }
 
     render() {
@@ -64,4 +77,4 @@ class Forecast extends Component {
     }
 }
 
-export default Forecast
+export default withInterval(Forecast)

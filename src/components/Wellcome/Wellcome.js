@@ -29,7 +29,7 @@ class Wellcome extends Component {
             }
             else if (this.state.username === '') {
                 this.setState({ username: what }, () => {
-                    this.props.onUpdate(this.state)
+                    this.props.onSaveConfig(this.state)
                 })
 
                 event.target.placeholder = 'updating...'
