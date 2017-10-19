@@ -3,7 +3,8 @@ section.forecast {
   float: right;
   margin-right: 2%;
   position: relative;
-  top: -4%; }
+  top: -4%;
+  z-index: 1; }
   section.forecast .wrapper {
     display: inline-block; }
   section.forecast p.temp {
@@ -15,17 +16,12 @@ section.forecast {
   section.forecast p.weather {
     font-family: 'Quicksand', sans-serif;
     text-align: center;
-    margin: 20px 0 0 0;
-    z-index: 1; }
+    margin: 20px 0 0 0; }
   section.forecast .move-left {
     float: left; }
   section.forecast .move-right {
     float: right; }
   section.forecast .move-right:last-of-type {
     clear: both; }
-  section.forecast li:after {
-    z-index: 1; }
-  section.forecast li:before {
-    z-index: 1; }
 
 /*# sourceMappingURL=Forecast.css.map */
