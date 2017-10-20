@@ -3,15 +3,15 @@
 ![html-5](https://mtzfactory.github.io/logos/png/html-5.png)
 ![css-3](https://mtzfactory.github.io/logos/png/css-3.png)
 
-### Geekfinity ~ tómate un momento de descanso geek.
+### Geekfinity ~ Keep calm and stay geek.
 
 Re-implementación del famoso complemento para navegadores _Momentum_.
 
 Equipo:
 
-+ [Pol Escalera][http://github.com/polescalera10]
-+ [Joan Marc Hernández][[http://github.com/joanamrc]
-+ [Ricardo Martínez][[http://github.com/mtzfactory]
++ [Pol Escalera](http://github.com/polescalera10)
++ [Joan Marc Hernández](http://github.com/joanamrc)
++ [Ricardo Martínez](http://github.com/mtzfactory)
 
 ### INSTALACION.
 
@@ -26,9 +26,9 @@ $ npm start
 
 ### PROYECTO ~ modulos.
 
-- WEATHER ~ A través de las coordenadas que devuelve una API de [localización][freegeoip], obtenemos la previsión del tiempo con la API de [wunderground][wunderground].
+- WEATHER ~ En este módulo coordinamos dos llamadas a diferentes API, al iniciarse se lanza una para buscar las [coordenadas de tu IP][freegeoip], cuando ésta se completa, se llama a la segunda, que segun la información recibida, devuelve la [previsión del tiempo][wunderground].
 
-- BAKGROUNDS ~ Fondos de pantalla con estilo geek, tomados de diferentes albums de _Filckr_. Se pueden añadir mas albumes en el fichero _albums.json_.
+- BAKGROUNDS ~ Fondos de pantalla con estilo geek, tomados de diferentes álbums de _Filckr_. Se pueden añadir mas albumes en el fichero _albums.json_.
 
 - QUOTES ~ Random de frases, a partir de varias APIs, o a partir del fichero _quotes.json_.
 
@@ -36,11 +36,12 @@ $ npm start
 
 - LOCALSTORAGE ~ Permite guardar los nombres del usuario y github para recuperarlos al volver a la página.
 
-- PERFIL GITHUB ~ Consulta el perfil del famoso repositorio, mostrando un poco de información de nuestro perfil.
+- PERFIL GITHUB ~ Consulta el perfil del famoso repositorio, mostrando un poco de información de nuestro perfil y pudiendo acceder directamente a este.
 
 - HOC ~ Componente que añade la funcionalidad de actualizar según un intervalo los componentes pasados a través de él.
 
 ![screenshoot-1](./screenshoots/screenshoot-1.png)
+
 ![screenshoot-2](./screenshoots/screenshoot-2.png)
 
 #### SkylabCoders Academy - Full Stack Web Development Bootcamp
