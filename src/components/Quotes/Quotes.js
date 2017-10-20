@@ -14,7 +14,7 @@ class Quotes extends Component {
         }
     }
 
-    updateQuote() {
+    updateQuote(origin) {
         quoteService.getQuoteOfTheDay()
         .then(quote => {
             this.setState({quote})
@@ -22,21 +22,23 @@ class Quotes extends Component {
         .catch(function(error) {
             console.error(error)
         })
+
+        //console.log('updateQuote', origin)
     }
 
     componentDidMount() {
-        console.log('Quotes', 'componentDidMount')
-        this.updateQuote()
+        this.updateQuote('componentDidMount')
     }
 
     componentWillReceiveProps(nextProps) {
         if (this.props.timestamp !== nextProps.timestamp) {
-            console.log('Quotes', 'componentWillReceiveProps')
-            this.updateQuote()
+            this.updateQuote('componentWillReceiveProps')
         }
     }
 
     render() {
+        //console.log('Quotes', 'render')
+
         return (
             <section className="quote" style={{ color: this.props.foreColor, backGround: this.props.backColor }}>
                 <p>{this.state.quote}</p>

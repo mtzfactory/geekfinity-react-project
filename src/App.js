@@ -6,10 +6,20 @@ import Geekfinity from './components/Geekfinity'
 
 class App extends Component {
 
+    constructor() {
+        super()
+
+        this.intervals = {
+            intervalBackground: 60,
+            intervalForecast: 600,
+            intervalQuote: 60
+        }
+    }
+
     render() {
         return (
             <HashRouter>
-                <Geekfinity/>
+                <Geekfinity interval={ this.intervals.intervalBackground } intervals={ this.intervals }/>
             </HashRouter>
         )
     }

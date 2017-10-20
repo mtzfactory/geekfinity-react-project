@@ -26,8 +26,7 @@ class Github extends Component {
         }));
      }
 
-    componentDidMount() {
-
+    updateGithub(origin) {
         GithubService.getProfile(this.props.user)
             .then(({name, public_repos, following, followers, avatar_url, html_url}) => {
                 //console.log(name, public_repos, following, followers, avatar_url, html_url)
@@ -36,9 +35,17 @@ class Github extends Component {
             .catch(function(error) {
                 console.error(error)
             })
+        
+        //console.log('updateGithub', origin)
+    }
+
+    componentDidMount() {
+        this.updateGithub('componentDidMount')
     }
 
     render() {
+        //console.log('Github', 'render')
+
         return (
             <section className="profile" style={{ color: this.props.foreColor, backGround: this.props.backColor }}>
                 <span  className="photo">

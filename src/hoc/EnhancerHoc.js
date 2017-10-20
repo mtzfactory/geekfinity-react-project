@@ -9,7 +9,6 @@ export default function withInterval(WrappedComponent) {
             this.timerId = 0
             
             this.state = {
-                timerId: 0,
                 timestamp: 0
             }
         }

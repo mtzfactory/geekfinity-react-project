@@ -28,7 +28,7 @@ class Forecast extends Component {
         }
     }
 
-    updateForecast() {
+    updateForecast(origin) {
         const localState = {}
         
         locationService.getLocation()
@@ -43,21 +43,22 @@ class Forecast extends Component {
             .catch(function(error) {
                 console.error(error)
             })
+        
+        //console.log('updateForecast', origin)
     }
 
     componentDidMount() {
-        console.log('Forecast', 'componentDidMount')
-        this.updateForecast()
+        this.updateForecast('componentDidMount')
     }
 
     componentWillReceiveProps(nextProps) {
         if (this.props.timestamp !== nextProps.timestamp) {
-            console.log('Forecast', 'componentWillReceiveProps')
-            this.updateForecast()
+            this.updateForecast('componentWillReceiveProps')
         }
     }
 
     render() {
+        //console.log('Forecast', 'render')
         const { forecast } = this.state
 
         return (

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import './Geekfinity.css'
 
+import withInterval from '../hoc/EnhancerHoc'
 import backgroundService from '../services/BackgroundService'
 
 import Wellcome from './Wellcome/Wellcome'
@@ -15,12 +16,6 @@ class Geekfinity extends Component {
     constructor() {
         super()
 
-        this.timerId = 0
-
-        this.intervalBackground = 60
-        this.intervalForecast = 600
-        this.intervalQuote = 60
-
         this.state = {
             name: '',
             username: '',
@@ -28,7 +23,7 @@ class Geekfinity extends Component {
         }
     }
 
-    updateBackground() {
+    updateBackground(origin) {
         backgroundService.getBackground()
         .then(image => {
             this.setState({ image })
@@ -36,6 +31,8 @@ class Geekfinity extends Component {
         .catch(function(error) {
             console.error(error)
         })
+
+        //console.log('updateBackground', origin)
     }
 
     handleSaveConfig = (newState) => {
@@ -47,11 +44,7 @@ class Geekfinity extends Component {
     }
 
     componentDidMount() {
-        this.updateBackground()
-
-        this.timerId = setInterval(() => {
-            this.updateBackground()
-        }, this.intervalBackground * 1000)
+        this.updateBackground('componentDidMount')
         
         if (typeof(Storage) !== "undefined") {
             if (localStorage['geekfinity.config']) {
@@ -61,11 +54,15 @@ class Geekfinity extends Component {
         }
     }
 
-    componentWillUnmount() {
-        clearInterval(this.timerId);
+    componentWillReceiveProps(nextProps) {
+        if (this.props.timestamp !== nextProps.timestamp) {
+            this.updateBackground('componentWillReceiveProps')
+        }
     }
 
     render() {
+        //console.log('Geekfinity', 'render')
+
         return (
             <main className="geekfinity bg-full appear-hide" style = {{ backgroundImage: "url(" + this.state.image + ")" }}>
                 <Wellcome onSaveConfig={ this.handleSaveConfig } name={this.state.name} username={this.state.username}  foreColor="white"/>
@@ -73,12 +70,12 @@ class Geekfinity extends Component {
                     <Github user={ this.state.username }/>
                 }
                 <Search foreColor='white'/>
-                <Forecast foreColor='white' interval={ this.intervalForecast }/>
+                <Forecast foreColor='white' interval={ this.props.intervals.intervalForecast }/>
                 <Time foreColor='white'/>
-                <Quotes foreColor='white' interval={ this.intervalQuote }/>
+                <Quotes foreColor='white' interval={ this.props.intervals.intervalQuote }/>
             </main>
         )
     }
 }
 
-export default Geekfinity
+export default withInterval(Geekfinity)
