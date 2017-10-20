@@ -12,7 +12,7 @@ class App extends Component {
         this.intervals = {
             intervalBackground: 60,
             intervalForecast: 600,
-            intervalQuote: 60
+            intervalQuote: 90
         }
     }
 
