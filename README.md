@@ -40,9 +40,9 @@ $ npm start
 
 - HOC ~ Componente que añade la funcionalidad de actualizar según un intervalo los componentes pasados a través de él.
 
-![screenshoot-0](./screenshoots/screenshoot-1.png)
+![screenshoot-0](./screenshoots/screenshoot-0.png)
 
-![screenshoot-1](./screenshoots/screenshoot-2.png)
+![screenshoot-1](./screenshoots/screenshoot-1.png)
 
 #### SkylabCoders Academy - Full Stack Web Development Bootcamp
 
