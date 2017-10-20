@@ -5,7 +5,17 @@
 
 ### Geekfinity ~ tómate un momento de descanso geek.
 
-Para instalar este ejemplo:
+Re-implementación del famoso complemento para navegadores _Momentum_.
+
+Equipo:
+
++ [Pol Escalera][http://github.com/polescalera10]
++ [Joan Marc Hernández][[http://github.com/joanamrc]
++ [Ricardo Martínez][[http://github.com/mtzfactory]
+
+### INSTALACION.
+
+Para instalar este proyecto:
 
 ```bash
 $ git clone https://github.com/mtzfactory/geekfinity-react-project.git
@@ -16,38 +26,26 @@ $ npm start
 
 ### PROYECTO ~ modulos.
 
-1.- WEATHER ~ A través de las coordenadas o ciudad que devuelve una api de [localización][freegeoip] recuperar la previsión del tiempo, tres posibles fuentes: [[1][darksky]] [[2][wunderground]] [[3][openweathermap]]
+- WEATHER ~ A través de las coordenadas que devuelve una API de [localización][freegeoip], obtenemos la previsión del tiempo con la API de [wunderground][wunderground].
 
-2.- BAKGROUNDS ~ fondos de pantalla con estilo geek.
+- BAKGROUNDS ~ Fondos de pantalla con estilo geek, tomados de diferentes albums de _Filckr_. Se pueden añadir mas albumes en el fichero _albums.json_.
 
-3.- QUOTES ~ random de frases a partir de varias APIs.
+- QUOTES ~ Random de frases, a partir de varias APIs, o a partir del fichero _quotes.json_.
 
-4.- TIME ~ 
+- SEARCH ~ Módulo para realizar busquedas desde nuestra web, redireccionando la búsqueda de forma random a _Yahoo_, _Google_ o _Bing_. Se puede especificar el buscador introduciendo '_y!_', '_g!_' o '_b!_' delante de la búsqueda.
 
-5.- SEARCH ~ 
+- LOCALSTORAGE ~ Permite guardar los nombres del usuario y github para recuperarlos al volver a la página.
 
-4.- ** TODO ~ tipico to-do... pero con nuestro toque geek.
+- PERFIL GITHUB ~ Consulta el perfil del famoso repositorio, mostrando un poco de información de nuestro perfil.
 
-5.- ** LOCALSTORAGE ~ guardar configuración del usuario en el localStorage del navegador.
+- HOC ~ Componente que añade la funcionalidad de actualizar según un intervalo los componentes pasados a través de él.
 
-6.- ** PERFIL GITHUB ~ muestra info de nuestro perfil de GitHub.
-
-_** === opcional_
-
-### TODO
-
-+ buscar mejor nombre, si es necesario.
-+ encontrar fuente de imagenes geek para fotos de fondo.
-+ encontrar fuente de frases geeks.
-+ plantear primer formato de landing page.
-
+![screenshoot-1](./screenshoots/screenshoot-1.png)
+![screenshoot-2](./screenshoots/screenshoot-2.png)
 
 #### SkylabCoders Academy - Full Stack Web Development Bootcamp
 
 [freegeoip]: https://freegeoip.net/json/
-
-[darksky]: https://darksky.net/dev
-[wunderground]: https://www.wunderground.com/weather/api/
 [openweathermap]: https://openweathermap.org/api
 
 [create-react-app]: https://github.com/facebookincubator/create-react-app
